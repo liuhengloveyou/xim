@@ -1,0 +1,23 @@
+{
+"nodeName":"access-127.0.0.1.5001",
+"nodeConf":"example/nodenet.conf.sample",
+"addr": "",
+"port": 10000,
+
+"passport":"http://127.0.0.1:10001",
+
+"session":{
+	"domain":        "xim.com",
+	"cookie_name":   "ximsession",
+	"store_type":    "mem",	
+	"idle_time":     300,
+	"cookie_expire": 300
+},
+
+"dbs":[{
+	"name": "xim",
+	"ng_type": "mysql",
+	"db_type": "mysql",
+	"dsn": "root:root@tcp(127.0.0.1:3306)/xim?charset=utf8"
+}]
+}

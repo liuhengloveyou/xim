@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list lines="none">
+  <ion-item>
+    <ion-avatar slot="start">
+<!--      <ion-img *ngIf="userInfo.avatar_url" [src]="userInfo.avatar_url" alt="avatar" tappable (click)="openPreview()" (ionError)="userInfo.avatar_url = null"> </ion-img>-->
+      <ion-icon name="contact" color="light" class="avatar-icon"></ion-icon>
+    </ion-avatar>
+    <ion-label routerLink="/myinfo">
+      <h1>nickname</h1>
+      <p>cellphone</p>
+    </ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="light" routerLink="/myinfo"></ion-icon>
+  </ion-item>
+</ion-list>
+
+
+<ion-content>
+  <ion-list class="conf-list">
+    <ion-item routerLink="/teams">
+      <ion-icon name="people" slot="start" color="primary"></ion-icon>
+      <ion-label>组织管理</ion-label>
+    </ion-item>
+    <ion-item routerLink="/position">
+      <ion-icon name="pricetags" slot="start" color="primary"></ion-icon>
+      <ion-label>角色管理</ion-label>
+    </ion-item>
+    <ion-item routerLink="/members">
+      <ion-icon name="man" slot="start" color="primary"></ion-icon>
+      <ion-label>成员管理</ion-label>
+    </ion-item>
+    <ion-item routerLink="/supplier" lines="none">
+      <ion-icon name="flower" slot="start" color="primary"></ion-icon>
+      <ion-label>供应商管理</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="conf-list">
+    <ion-item routerLink="/accounting">
+      <ion-icon name="card" slot="start" color="primary"></ion-icon>
+      <ion-label>收支分析</ion-label>
+    </ion-item>
+    <ion-item lines="none" routerLink="/project-docs">
+      <ion-icon name="document" slot="start" color="primary"></ion-icon>
+      <ion-label>项目文档</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="conf-list">
+    <ion-item (click)="onCostClass('cost-class')">
+      <ion-icon name="list" slot="start" color="primary"></ion-icon>
+      <ion-label>支出分类管理</ion-label>
+    </ion-item>
+    <ion-item lines="none" (click)="onCostClass('income-class')">
+      <ion-icon name="list" slot="start" color="primary"></ion-icon>
+      <ion-label>收入分类管理</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list class="conf-list">
+    <ion-item lines="none" routerLink="#">
+      <ion-icon name="list-box" slot="start" color="primary"></ion-icon>
+      <ion-label>任务计划模板管理</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
